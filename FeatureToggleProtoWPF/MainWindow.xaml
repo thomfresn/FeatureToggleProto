@@ -5,13 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FeatureToggleProtoWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="367.84" Width="620.995">
     <Window.Resources>
         <BooleanToVisibilityConverter x:Key="converter" />
     </Window.Resources>
-    <Grid>
+    <Grid Margin="0,0,3.4,-1.6">
         <CheckBox Content="{Binding ProUserMessageDisplayed}" HorizontalAlignment="Left" Margin="85,46,0,0" VerticalAlignment="Top" IsChecked="{Binding IsAdmin}"/>
-        <Button Content="Pro action only" Visibility="{Binding IsNewProFeatureVisible, Converter={StaticResource converter}}" HorizontalAlignment="Left" Margin="85,89,0,0" VerticalAlignment="Top" Width="201"/>
+        <Button Content="New feature - Pro only" Visibility="{Binding IsNewProFeatureVisible, Converter={StaticResource converter}}" HorizontalAlignment="Left" Margin="85,89,0,0" VerticalAlignment="Top" Width="201"/>
+        <Label Content="The new feature needs to be enabled through the toggle in the app.config and the user must be a Pro" HorizontalAlignment="Left" Margin="33,10,-23,0" VerticalAlignment="Top" Width="601"/>
 
     </Grid>
 </Window>
